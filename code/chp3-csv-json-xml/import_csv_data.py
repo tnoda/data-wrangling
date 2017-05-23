@@ -1,7 +1,15 @@
-import csv
+import pandas as pd
 
-csvfile = open('../../data/chp3/data-text.csv', 'rb')
-reader = csv.reader(csvfile)
+csvfile = pd.read_csv('../../data/chp3/data-text.csv')
+for idx, row in csvfile.iterrows():
+    print(row)
 
-for row in reader:
-    print row
+
+
+
+
+
+
+
+
+
