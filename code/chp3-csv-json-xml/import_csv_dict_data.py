@@ -1,7 +1,6 @@
-import csv
+import pandas as pd
 
-csvfile = open('data-text.csv', 'rb')
-reader = csv.DictReader(csvfile)
 
-for row in reader:
-    print row
+csvfile = pd.read_csv('../../data/chp3/data-text.csv')
+for row in csvfile.to_dict('record'):
+    print(row)
